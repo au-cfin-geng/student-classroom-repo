@@ -1184,8 +1184,7 @@ def do_full_reset(state: dict) -> dict:
 
 
 # ── Tutorial debug flag ───────────────────────────────────────────────────────
-# Set True while debugging; set False before student release.
-TUTORIAL_DEBUG = True
+TUTORIAL_DEBUG = False
 
 _TUTORIAL_STEPS: list[dict] = [
     {
@@ -1307,9 +1306,9 @@ def _build_tutorial_focus_js(target: str) -> str:
         'opacity:0.35;transition:opacity .2s,box-shadow .2s}}' +
       'body.tut-mode [id^="tut-target-"].tut-focus{{' +
         'opacity:1!important;' +
-        'outline:3px solid #2563EB!important;outline-offset:5px!important;' +
+        'outline:4px solid #F97316!important;outline-offset:5px!important;' +
         'border-radius:8px!important;background:#FFFFFF!important;' +
-        'box-shadow:0 0 0 9px rgba(37,99,235,.09),0 4px 24px rgba(0,0,0,.08)!important}}';
+        'box-shadow:0 0 0 8px rgba(249,115,22,.15),0 4px 24px rgba(0,0,0,.07)!important}}';
     PDOC.head.appendChild(st);
     dbg('CSS injected');
   }}
@@ -1379,7 +1378,6 @@ def render_tutorial_nav(step: int) -> None:
     target  = s.get("target") or ""
     pct     = int((step + 1) / total * 100)
 
-    # ── Temporary debug line (remove before release) ──────────────────────────
     if TUTORIAL_DEBUG:
         st.caption(
             f"Tutorial debug: active=True  step={step}/{total-1}"

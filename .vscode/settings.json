@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "app/": true,
+    "artifacts/": true,
+    ".coursekit/": true,
+    ".devcontainer/": true,
+    ".github/": true,
+    ".session_archives/": true,
+    ".student_state/": true
+  },
+  "search.exclude": {
+    "app/": true,
+    ".coursekit/": true,
+    ".session_archives/": true,
+    ".student_state/": true,
+    ".venv/": true
+  }
+}

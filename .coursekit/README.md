@@ -1,26 +1,41 @@
-# .coursekit — Instructor Reference
+# .coursekit — Instructor / Advisor Reference
 
-This hidden directory contains course infrastructure that students do not need
-to interact with directly.
+This hidden directory contains course infrastructure and reference materials.
+Students do not need to interact with it.
 
-## What is in here
+## Contents
 
-Nothing yet — this directory serves as the designated location for instructor-only
-materials that may be added later, such as:
+| File / Folder | Purpose |
+|---|---|
+| `classroom_handoff.md` | Instructor setup and classroom logistics |
+| `student_lab_os_design_spec_v1.md` | Full design specification for the Lab OS |
+| `advisor_preview_v1.md` | Short prototype summary for advisor review |
+| `archive/` | Earlier planning documents |
 
-- Reference script implementations (for instructors who want to compare against student output)
-- Grading rubrics and assessment notes  
-- Session archive tooling
-- Course calibration data
+## What students work with
 
-## What students see
+Students operate entirely in:
 
-Students work in:
-- `prompts/` — the natural-language prompts that drive the lab
-- `scripts/` — their working Python files (created or modified via Claude Code)
+- `prompts/` — the natural-language prompts that drive each mission
+- `scripts/` — Python scripts that Claude creates and extends on the student's behalf
 - `reports/` — written outputs produced during the lab
 - `outputs/` — figures, metrics, and status files produced by scripts
-- `CLAUDE.md` — the lab contract for Claude Code sessions
+- `README.md`, `ASSIGNMENT.md`, `CLAUDE.md` — orientation and contract documents
+- `Makefile` — pipeline commands (`make dashboard`, `make fetch-sample`, etc.)
+
+## Hidden support infrastructure
+
+The following directories are part of the system but hidden from the VS Code Explorer
+by default (via `.vscode/settings.json`):
+
+| Directory | Role |
+|---|---|
+| `app/` | Dashboard source — run via `make dashboard`, not edited by students |
+| `artifacts/` | Grading contract schema — do not edit |
+| `.github/` | CI autograding workflows — do not edit |
+| `.devcontainer/` | Dev container configuration |
+| `.session_archives/` | Runtime session snapshots (auto-created) |
+| `.student_state/` | Mission progress state (auto-created) |
 
 ## Design intent
 
