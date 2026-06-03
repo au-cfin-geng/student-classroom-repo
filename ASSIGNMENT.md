@@ -54,6 +54,37 @@ Each mission has a goal, a set of allowed files, and completion criteria visible
 
 ---
 
+## Agentic research skills you will practice
+
+- Reading a repository with Claude Code (Mission 0)
+- Using CLAUDE.md as project memory (all missions)
+- Writing prompts with explicit output contracts (all missions)
+- Asking Claude to inspect before acting (Missions 1, 3)
+- Building a reproducible baseline with defined success criteria (Mission 2)
+- Using observation → evidence → hypothesis sequencing (Mission 3)
+- Running controlled single-variable experiments (Mission 4)
+- Switching Claude's role: developer → reviewer → clinical translator (Missions 5, 6)
+- Comparing prompt strategies (all missions)
+- Preserving required artifacts while exploring optional extensions (Missions 2–5)
+- Maintaining human scientific judgment throughout (all missions)
+
+---
+
+## Traditional problem → Claude method → research artifact
+
+| Mission | Traditional bottleneck | Claude / agentic method | Artifact produced |
+|---|---|---|---|
+| Preflight | Environment setup fails silently | Claude as setup assistant + readiness audit | outputs/status/preflight_complete.json |
+| Mission 0 | Environment chaos; unclear readiness | CLAUDE.md project memory + output contract | reports/env_check.md |
+| Mission 1 | Modeling before understanding data | Claude as data steward + file inspection | reports/data_notes.md |
+| Mission 2 | Complex models without a baseline | Claude as builder + evaluation-driven prompting | outputs/metrics/val_metrics.json |
+| Mission 3 | Metrics without error understanding | Claude as visual debugger + hypothesis generator | reports/error_analysis.md |
+| Mission 4 | Untracked multi-variable tweaking | Claude as algorithm engineer + controlled comparison | reports/model_swap.md |
+| Mission 5 | Pilot results with no next study design | Role switching to reviewer / study design critic | reports/challenge_plan.md |
+| Mission 6 | Overclaiming prototype capabilities | Claude as clinical translator + honesty constraint | reports/translation_memo.md |
+
+---
+
 ## What you submit
 
 You submit this GitHub repository. At submission time, the repository must contain all of the required artifacts listed below. Grading runs automated tests against your committed files.

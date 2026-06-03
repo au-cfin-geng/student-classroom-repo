@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Students often start with complex models or optimized settings, making later comparisons meaningless. Without an honest baseline with fixed evaluation criteria, you cannot know whether any future change is an improvement.
+
+## Claude / agentic method introduced
+Claude as builder and evaluator; code generation with explicit output contracts (exact metric name, exact file paths, exact JSON structure); evaluation-driven prompting that defines success before execution.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude Code in Action; Claude Code 101; AI Capabilities and Limitations.
+> Recommended external reading: Claude Code in Action; Claude Code 101; AI Capabilities and Limitations.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to build the simplest measurable baseline for any task — with pre-defined evaluation criteria, fixed random seed, and exact artifact paths — before attempting any optimization.
+
+---
+
 # Mission 2 — Build the First Detector (Part 2): Train and Evaluate
 
 ## What this mission is about
@@ -106,3 +122,19 @@ report it in a way that cannot be compared across runs.
   Dice matter more for evaluating model quality?
 - If the Dice score is 0.05, should you move forward to Mission 3 or investigate first?
   What would you look for?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `outputs/figures/loss_curve.png` | Training or evaluation curve figure |
+| `reports/train_notes.md` | Model description, parameters, Dice result, observations |
+| `outputs/metrics/val_metrics.json` | `{"dice": <float 0–1>, "n_slices": N}` |
+| `outputs/status/stage_03_train_baseline.json` | `{"status": "ok", "dice": <float>, "n_slices": N}` |
+
+## What to inspect manually
+Open outputs/metrics/val_metrics.json. Is the dice value a real float between 0 and 1? Open outputs/figures/loss_curve.png. Does the curve look like training happened, or is it flat/noise? Open reports/train_notes.md — does it honestly describe the model used?
+
+## Transfer to your own PhD research
+For your own research task, what would be the simplest measurable baseline and what metric would you use to evaluate it? How would you define "good enough" before you start training?
+
+---

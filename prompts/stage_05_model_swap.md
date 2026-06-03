@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Students often make multiple simultaneous changes, then cannot attribute any improvement (or regression) to a specific cause. Untracked tweaking is not science — it is guesswork.
+
+## Claude / agentic method introduced
+Claude as algorithm engineer running a controlled single-variable experiment; prompt-guided iteration that preserves the baseline and compares exactly one change at a time.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude Code in Action; Introduction to agent skills; AI Fluency: Framework & Foundations.
+> Recommended external reading: Claude Code in Action; Introduction to agent skills; AI Fluency: Framework & Foundations.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to run a controlled single-variable experiment — making one change, preserving the baseline comparison, and documenting whether the change actually helped and why.
+
+---
+
 # Mission 4 — Improve With Intent (Part 1): Controlled Change
 
 ## What this mission is about
@@ -111,3 +127,19 @@ noise. Good prompting is good science communication.
 - What does a "negative delta" tell you scientifically? Is it a failure?
 - The prompt says "report the result honestly." Why does this instruction need to be explicit?
   What would dishonest reporting look like in this context?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `outputs/figures/model_swap_comparison.png` | Before/after comparison figure |
+| `outputs/metrics/model_swap_comparison.json` | `{"baseline_dice": X, "new_dice": Y, "delta": Z, "change_description": "..."}` |
+| `reports/model_swap.md` | Change description, result, hypothesis assessment |
+| `outputs/status/stage_05_model_swap.json` | `{"status": "ok", "baseline_dice": X, "new_dice": Y, "delta": Z, "change_description": "..."}` |
+
+## What to inspect manually
+Open outputs/metrics/model_swap_comparison.json. Is baseline_dice the same number as val_metrics.json? (It should be — same baseline.) Is new_dice different? Is change_description specific about what changed?
+
+## Transfer to your own PhD research
+In your own PhD research, what is one change you might make to your analysis pipeline — and how would you design a controlled test to know whether it truly improved your results?
+
+---

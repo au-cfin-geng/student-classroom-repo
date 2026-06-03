@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Students often jump straight to modeling without verifying data provenance, confirming what modalities are present, checking label integrity, or understanding class distribution. These oversights create invisible errors later.
+
+## Claude / agentic method introduced
+Claude as data steward; file inspection before any modeling action; establishing a data receipt that records what was received and what was verified.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude 101; Claude Code in Action; AI Fluency: Framework & Foundations.
+> Recommended external reading: Claude 101; Claude Code in Action; AI Fluency: Framework & Foundations.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to write a data integrity report — a documented receipt of exactly what data you received, what was verified, and what is uncertain — before any analysis begins.
+
+---
+
 # Mission 1 — Receive the Signal
 
 ## What this mission is about
@@ -92,3 +108,17 @@ Claude should verify* is more reproducible than one that just says "fetch the da
 - What is the difference between `n_slices` being 0 versus the status file being missing?
 - Why does the prompt ask Claude to check whether the source is "accessible" rather
   than just assuming the script will handle that?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `data/sample/` | At least one image file and one mask file |
+| `outputs/status/stage_01_fetch_sample.json` | `{"status": "ok", "dataset": "...", "n_slices": N, "modality": "...", "source": "...", "pack_path": "..."}` |
+
+## What to inspect manually
+Open data/sample/ and look at whether the files match what the report says. Open reports/data_notes.md and check whether it honestly describes the data rather than just listing filenames.
+
+## Transfer to your own PhD research
+For your own PhD dataset, what five things would you want Claude to verify and document before you begin any computational analysis?
+
+---

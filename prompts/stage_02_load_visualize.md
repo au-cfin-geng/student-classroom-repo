@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Students skip visual inspection and go straight to model training. Visualization reveals data quality problems — wrong file formats, misaligned labels, unexpected value ranges — that metrics alone will never catch.
+
+## Claude / agentic method introduced
+Claude as visual inspector; generating evidence before quantitative work; building the "see before you measure" habit for all research workflows.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude Code in Action; Claude 101; AI Fluency: Framework & Foundations.
+> Recommended external reading: Claude Code in Action; Claude 101; AI Fluency: Framework & Foundations.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to produce visual evidence of your data before any quantitative analysis — image overlays, distribution plots, quality checks — and document what you see.
+
+---
+
 # Mission 2 — Build the First Detector (Part 1): Inspect the Data
 
 ## What this mission is about
@@ -89,3 +105,18 @@ is as important as the figure.
 - What is the difference between a "clean" and a "noisy" mask boundary for model training?
 - If `sample_overlay.png` is created but `data_notes.md` is empty or trivial,
   has this mission succeeded? Why or why not?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `outputs/figures/sample_overlay.png` | Image with mask overlay, non-empty |
+| `reports/data_notes.md` | Written observations: modality, anatomy, boundary quality, challenges |
+| `outputs/status/stage_02_load_visualize.json` | `{"status": "ok", "figure": "sample_overlay.png"}` |
+
+## What to inspect manually
+Open outputs/figures/sample_overlay.png. Does the label overlay visually align with the image? Does the tumour region look plausible? Is the colour coding what you expected?
+
+## Transfer to your own PhD research
+What would a visual inspection step look like for your own PhD data — what would Claude need to produce for you to feel confident that your data loaded correctly?
+
+---

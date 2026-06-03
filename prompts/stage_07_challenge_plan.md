@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Students finish a pilot experiment but struggle to convert failure analysis into a structured research question, a testable method, and a pre-specified success criterion. Research design is a distinct skill from execution.
+
+## Claude / agentic method introduced
+Role switching from developer to reviewer to study designer; critique prompting ("as the methods reviewer... as the devil's advocate..."); the plan-before-code discipline; subagents as a conceptual extension for multi-perspective analysis.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from AI Fluency for students; Introduction to subagents; Teaching AI Fluency; AI Capabilities and Limitations.
+> Recommended external reading: AI Fluency for students; Introduction to subagents; Teaching AI Fluency; AI Capabilities and Limitations.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude in reviewer/supervisor mode to stress-test a research plan before committing to implementation — surfacing assumptions, weak points, and alternative approaches.
+
+---
+
 # Mission 5 — Design the Next Study (Part 1): Research Plan
 
 ## What this mission is about
@@ -124,3 +140,17 @@ is testable against it.
   Why is this important to think about *before* running the experiment?
 - How does writing "What Would Count as Success" before running the experiment
   protect against p-hacking or motivated reasoning?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `reports/challenge_plan.md` | All 6 sections, > 200 chars, `# Day 2 Challenge Plan` header |
+| `outputs/status/stage_07_challenge_plan.json` | `{"status": "ok", "identified_weakness": "...", "proposed_change": "..."}` |
+
+## What to inspect manually
+Open reports/challenge_plan.md. Is the Research Question formatted as "Does [intervention X] improve [metric Y] compared to [baseline Z] in [context C]?" Is "What Would Count as Success" a specific, measurable criterion? Does "Risks and Failure Conditions" name a result that would cause you to abandon the direction?
+
+## Transfer to your own PhD research
+For your next PhD experiment, could you write all six sections of this challenge plan before touching any code or data? What sections would be hardest to fill in, and why?
+
+---

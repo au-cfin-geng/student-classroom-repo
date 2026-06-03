@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Teams often treat the Dice score as a complete evaluation. A single aggregate number hides WHERE the model fails, WHETHER failures are systematic, and WHY specific cases are hard — information essential for principled improvement.
+
+## Claude / agentic method introduced
+Claude as visual debugging assistant and hypothesis generator; critique prompting that sequences observation before explanation; the observation → evidence → hypothesis discipline.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from AI Fluency for students; AI Capabilities and Limitations; Claude Code in Action.
+> Recommended external reading: AI Fluency for students; AI Capabilities and Limitations; Claude Code in Action.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to systematically move from "the metric is low" to "here is a specific, testable failure hypothesis grounded in visual evidence."
+
+---
+
 # Mission 3 — Investigate Failure
 
 ## What this mission is about
@@ -102,3 +118,19 @@ Always sequence: look first, explain second.
 - What is the difference between a description ("the model does poorly in some regions")
   and a hypothesis ("the model fails when the boundary contrast is below X")?
 - How would you test whether your hypothesis is correct in Mission 4?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `outputs/figures/error_analysis_best.png` | Best-case: image, GT, prediction, error map |
+| `outputs/figures/error_analysis_worst.png` | Worst-case: image, GT, prediction, error map |
+| `reports/error_analysis.md` | Best/worst Dice, visual description, failure hypothesis |
+| `outputs/status/stage_04_error_analysis.json` | `{"status": "ok", "best_case": {...}, "worst_case": {...}, "n_slices": N}` |
+
+## What to inspect manually
+Open outputs/figures/error_analysis_worst.png. Can you describe in one sentence what is visually wrong in the worst case? Open reports/error_analysis.md — is the failure hypothesis specific and testable, or vague?
+
+## Transfer to your own PhD research
+For your own research model or analysis, how would you identify and visualize the hardest cases — the ones your approach fails on most severely?
+
+---

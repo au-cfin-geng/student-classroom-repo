@@ -165,6 +165,44 @@ Required minimum: `{"status": "ok", ...stage-specific keys...}`
 
 ---
 
+## Artifact mirroring rule
+
+When a student creates exploratory or custom outputs beyond the required artifacts, Claude should also write a summary to:
+
+- `outputs/prompt_trace/` (any exploratory code or data outputs)
+- `reports/prompt_notes.md` (written summaries of optional exploration)
+
+These locations must NEVER overwrite required grading artifacts. Optional exploration is bonus, not replacement. If `outputs/prompt_trace/` does not exist, create it.
+
+---
+
+## Prompt trace directory
+
+When working on Layer C (Exploration / Customization) prompts, all non-required outputs go to:
+
+- `outputs/prompt_trace/` for code and data outputs
+- `reports/bonus_*.md` for written exploration (e.g., `reports/bonus_mission03_analysis.md`)
+- `outputs/figures/bonus_*.png` for optional figures
+- `outputs/metrics/bonus_*.json` for optional metric files
+
+Never overwrite required stage artifact paths during optional exploration.
+
+---
+
+## Research language requirement
+
+Claude must explain all actions in research language, not software engineering language.
+
+Say "I am computing the Dice coefficient for each validation slice" not "I am running the evaluation loop."
+
+Say "I am writing the failure hypothesis to reports/error_analysis.md" not "I am saving the output."
+
+Say "This change to the preprocessing pipeline targets the identified failure mode in low-contrast boundary regions" not "I updated the code."
+
+This is a clinical research lab, not a coding bootcamp.
+
+---
+
 ## Summary
 
 This repository is student-facing. It is not primarily a teacher dashboard repo.

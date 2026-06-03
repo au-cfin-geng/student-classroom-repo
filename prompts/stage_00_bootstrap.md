@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+A clinical AI project often begins with unclear repo structure, hidden dependencies, and no shared definition of "ready." Students lose time diagnosing setup instead of doing science.
+
+## Claude / agentic method introduced
+CLAUDE.md as project memory; Claude reads project context before acting; human approval loop; explicit output contract establishing a machine-checkable baseline.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude Code 101; Introduction to Claude Cowork; Claude Code in Action.
+> Recommended external reading: Claude Code 101; Introduction to Claude Cowork; Claude Code in Action.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Before beginning any research project, use Claude to audit your environment and produce a machine-readable readiness report.
+
+---
+
 # Mission 0 — Wake the Lab
 
 ## What this mission is about
@@ -95,3 +111,17 @@ contract, the output becomes independently verifiable.
   just saying "write a status file"?
 - What would happen to downstream grading checks if `outputs/status/stage_00_bootstrap.json`
   was missing or had `"status": "error"`?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `reports/env_check.md` | Python version, platform, package status, any issues |
+| `outputs/status/stage_00_bootstrap.json` | `{"status": "ok", "python_version": "...", "platform": "..."}` |
+
+## What to inspect manually
+Open reports/env_check.md and verify it reflects your actual machine. Open outputs/status/stage_00_bootstrap.json and confirm status is "ok" and the values are real (not placeholder).
+
+## Transfer to your own PhD research
+If you were setting up your own PhD project environment, what three things would you want Claude to check before letting you start analysis?
+
+---

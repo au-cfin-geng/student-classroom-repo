@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Students overstate prototype capabilities, conflate research performance with clinical readiness, or fail to communicate technical limitations in terms a clinical collaborator can understand and act on.
+
+## Claude / agentic method introduced
+Claude as clinical translator; audience-aware writing (medicine-not-ML); explicit honesty constraints; limitation-first reporting; multi-stakeholder perspective taking.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude 101; AI Fluency: Framework & Foundations; AI Capabilities and Limitations.
+> Recommended external reading: Claude 101; AI Fluency: Framework & Foundations; AI Capabilities and Limitations.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to communicate any technical research result responsibly — with audience-appropriate language, explicit limitations, and honest characterization of what was and was not demonstrated.
+
+---
+
 # Mission 6 — Translate Responsibly
 
 ## What this mission is about
@@ -127,3 +143,17 @@ omit them entirely. Both constraints are necessary.
   rather than just "be honest"?
 - What ethical obligations do you have when communicating AI system limitations
   to a clinical collaborator who may not understand the technical caveats?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `reports/translation_memo.md` | 6 sections, honest assessment, > 400 chars, `# Clinical Translation Memo` header |
+| `outputs/status/stage_09_translation_memo.json` | `{"status": "ok", "best_dice": X, "best_method": "..."}` |
+
+## What to inspect manually
+Open reports/translation_memo.md. Can you find the words "research prototype"? Are there at least 3 concrete limitations listed? Does "What Was Not Demonstrated" name specific clinical validity questions that remain unanswered?
+
+## Transfer to your own PhD research
+For your own PhD research output (a model, a result, a tool), how would you write a one-page memo for a clinical collaborator that is accurate, honest, and useful — without either overselling or underselling what you built?
+
+---

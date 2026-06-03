@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Students implement plans without verifying that the implementation matches the plan. Code drifts from its stated intent, making the comparison to the plan meaningless.
+
+## Claude / agentic method introduced
+Claude as implementer under supervision; verification that what was built matches what was planned; the supervisor role checking implementation against stated intent.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude Code in Action; Introduction to agent skills; Claude Code 101.
+> Recommended external reading: Claude Code in Action; Introduction to agent skills; Claude Code 101.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to implement a research plan while simultaneously acting as a supervisor that verifies each implementation step against the stated research question and success criteria.
+
+---
+
 # Mission 5 — Design the Next Study (Part 2): Implement and Measure
 
 ## What this mission is about
@@ -107,3 +123,19 @@ optional.
 - What does it mean if the adaptation improved Dice but did not meet the
   pre-specified success criterion?
 - How would you report a negative result in a way that is still scientifically useful?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `outputs/figures/challenge_comparison.png` | Before/after Day 1 vs Day 2 comparison figure |
+| `outputs/metrics/challenge_comparison.json` | `{"baseline_dice": X, "new_dice": Y, "delta": Z, "change_description": "..."}` |
+| `reports/adapt_pipeline.md` | Implementation description, result, plan vs outcome assessment |
+| `outputs/status/stage_08_adapt_pipeline.json` | `{"status": "ok", "changes_summary": "...", "baseline_dice": X, "new_dice": Y, "delta": Z}` |
+
+## What to inspect manually
+Open reports/adapt_pipeline.md. Does it reference the specific weakness and research question from reports/challenge_plan.md? Do the metrics in outputs/metrics/challenge_comparison.json match the success criterion defined in the challenge plan?
+
+## Transfer to your own PhD research
+After implementing a change in your own research, how would you verify that the implementation actually targets the weakness you identified — rather than just adding complexity?
+
+---

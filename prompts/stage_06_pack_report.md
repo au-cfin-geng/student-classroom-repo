@@ -1,3 +1,19 @@
+## Traditional workflow pain point
+Day 1 results exist as scattered files with no synthesized narrative. Without an integrated summary, students cannot identify the thread connecting setup → data → modeling → failure → improvement.
+
+## Claude / agentic method introduced
+Claude as research narrator; synthesizing artifacts into a coherent scientific story; the "what did we learn and what remains open" structure.
+
+## Anthropic Academy / Claude learning connection
+> This mission aligns with concepts from Claude Code 101; Claude Code in Action; AI Fluency: Framework & Foundations.
+> Recommended external reading: Claude Code 101; Claude Code in Action; AI Fluency: Framework & Foundations.
+> (Note: this lab creates original clinical AI research exercises. It does not reproduce or contain Anthropic Academy course content.)
+
+## Transferable PhD research skill
+Use Claude to synthesize a set of disparate research artifacts into a coherent day-end narrative that honestly summarizes what was demonstrated, what was not, and what is still open.
+
+---
+
 # Mission 4 — Improve With Intent (Part 2): Assemble Day 1 Summary
 
 ## What this mission is about
@@ -92,3 +108,17 @@ and a scientific narrative.
   when reading the final document?
 - Why does the prompt specify section names explicitly rather than letting Claude choose them?
 - What is the purpose of the "Open Questions" section for Day 2 planning?
+
+## Output contract
+| File | Minimum content |
+|------|-----------------|
+| `reports/day1_summary.md` | 5 sections minimum, analytical content, > 400 chars |
+| `outputs/status/stage_06_pack_report.json` | `{"status": "ok", "sections": [...]}` |
+
+## What to inspect manually
+Open reports/day1_summary.md. Does it read as a research narrative or as a list of completed steps? Does it honestly name what did not work or what remains uncertain?
+
+## Transfer to your own PhD research
+After completing a phase of your own PhD research, what would a one-page honest summary include — and how might Claude help you write one that is scientifically accurate rather than just optimistic?
+
+---
