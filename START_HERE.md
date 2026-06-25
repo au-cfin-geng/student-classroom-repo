@@ -1,5 +1,8 @@
 # START HERE — Agentic Clinical Research Studio
 
+> **First time here?** If you have not visited the course onboarding site yet, start there.
+> Course onboarding site: [to be enabled via GitHub Pages — see course-site/]
+
 Welcome. This is the first file you read.
 
 ---

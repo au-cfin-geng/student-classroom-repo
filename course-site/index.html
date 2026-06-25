@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic Clinical Research Studio</title>
+  <meta name="description" content="A two-day clinical research laboratory for medical and life-science PhD students. Start here before opening the repository." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-brand">Agentic Clinical Research Studio</span>
+  <a href="#curriculum">Curriculum</a>
+  <a href="#setup">Setup</a>
+  <a href="#prompt">Prompt</a>
+  <a href="#help">Help</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="col">
+    <p class="hero-meta">Course onboarding &nbsp;·&nbsp; Two-day laboratory &nbsp;·&nbsp; Clinical research</p>
+    <h1>Agentic Clinical<br>Research Studio</h1>
+    <p class="hero-sub">
+      A two-day clinical research lab where medical and life-science PhD students
+      learn to use Claude, VS Code, and GitHub to build traceable, reviewable
+      agentic research workflows.
+    </p>
+    <span class="start-banner">Start here before opening the repository</span>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="col">
+    <p class="eyebrow">Curriculum</p>
+    <h2>What you will learn</h2>
+    <p class="lead">Each lab teaches one research principle through a concrete clinical scenario. All work is done through structured prompts — no prior programming required.</p>
+
+    <div class="syllabus">
+      <div class="syllabus-row">
+        <span class="syl-num">Lab 01</span>
+        <div>
+          <p class="syl-title">Prompt Contracts</p>
+          <p class="syl-desc">Turn vague clinical research requests into verifiable, auditable tasks with explicit output criteria and success conditions.</p>
+        </div>
+      </div>
+      <div class="syllabus-row">
+        <span class="syl-num">Lab 02</span>
+        <div>
+          <p class="syl-title">Stakeholder Review</p>
+          <p class="syl-desc">Use Claude to review a study from IT, clinician, legal, PI, reviewer, and public perspectives simultaneously.</p>
+        </div>
+      </div>
+      <div class="syllabus-row">
+        <span class="syl-num">Lab 03</span>
+        <div>
+          <p class="syl-title">Literature Search Skills</p>
+          <p class="syl-desc">Build reusable Claude workflows for translating clinical questions into rigorous, reproducible search strategies.</p>
+        </div>
+      </div>
+      <div class="syllabus-row">
+        <span class="syl-num">Lab 04</span>
+        <div>
+          <p class="syl-title">Tool / MCP-Aware Workflows</p>
+          <p class="syl-desc">Design safe, auditable ways for Claude to connect to files, papers, datasets, and external research tools.</p>
+        </div>
+      </div>
+      <div class="syllabus-row">
+        <span class="syl-num">Lab 05</span>
+        <div>
+          <p class="syl-title">Subagent Workflows</p>
+          <p class="syl-desc">Design a small agentic research team for dividing, reviewing, and synthesising clinical research tasks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="capstone-strip">
+      <strong>Capstone Mini-Project</strong>
+      Apply the complete workflow to your own clinical research question.
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="col">
+    <p class="eyebrow">Course model</p>
+    <h2>How the course works</h2>
+    <p class="lead">Every lab follows the same loop. Claude is your research partner — not an answer machine. You write the prompt; Claude produces the artifact; you evaluate it.</p>
+
+    <div class="process">
+      <div class="process-item">
+        <div>
+          <strong>Read the lesson</strong>
+          <span>Open the dashboard with <code>make dashboard</code> and read the lab brief in the sidebar.</span>
+        </div>
+      </div>
+      <div class="process-item">
+        <div>
+          <strong>Copy the lab prompt into Claude Code</strong>
+          <span>Each lab has a ready-made prompt. Paste it into Claude Code inside VS Code.</span>
+        </div>
+      </div>
+      <div class="process-item">
+        <div>
+          <strong>Claude works inside LabXX/work/</strong>
+          <span>Claude produces structured research artifacts — documents, plans, search strategies, reviews.</span>
+        </div>
+      </div>
+      <div class="process-item">
+        <div>
+          <strong>You inspect the artifact</strong>
+          <span>Read Claude's output critically. Is it grounded? Does it meet the research standard? Is it honest about uncertainty?</span>
+        </div>
+      </div>
+      <div class="process-item">
+        <div>
+          <strong>Claude packages the submission</strong>
+          <span>Paste the Finish Lab prompt — Claude creates <code>LabXXSubmission/</code> automatically. You do not run commands.</span>
+        </div>
+      </div>
+      <div class="process-item">
+        <div>
+          <strong>GitHub checks progress</strong>
+          <span>GitHub Actions verifies the submission structure on every push. Your instructor reviews selected submissions.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="model-note">
+      <p class="mn-label">The student mental model</p>
+      <p>You work in <code>LabXX/work/</code>.</p>
+      <p>Claude packages <code>LabXXSubmission/</code> using the Finish Lab prompt.</p>
+      <p>GitHub Actions checks structure automatically on every push.</p>
+      <p>The instructor reviews selected submissions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="setup">
+  <div class="col">
+    <p class="eyebrow">Setup</p>
+    <h2>Setup checklist</h2>
+    <p class="lead">Complete these six steps once, before opening the repository. After setup, everything runs through Claude Code and the course dashboard.</p>
+
+    <div class="setup-steps">
+      <div class="setup-step">
+        <span class="step-circle">1</span>
+        <div>
+          <h3>Install VS Code</h3>
+          <p>Download and install Visual Studio Code for your operating system.</p>
+          <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">code.visualstudio.com/Download →</a>
+        </div>
+      </div>
+      <div class="setup-step">
+        <span class="step-circle">2</span>
+        <div>
+          <h3>Install Claude Code</h3>
+          <p>Claude Code lets Claude read the project, edit files, run commands, and help prepare submissions. Follow the official installation guide.</p>
+          <a href="https://docs.anthropic.com/en/claude-code/overview" target="_blank" rel="noopener">Claude Code overview and installation →</a>
+        </div>
+      </div>
+      <div class="setup-step">
+        <span class="step-circle">3</span>
+        <div>
+          <h3>Add Claude Code to VS Code</h3>
+          <p>Open the Extensions panel (<code>Cmd+Shift+X</code> on Mac · <code>Ctrl+Shift+X</code> on Windows), search for <strong>Claude Code</strong>, and install. Sign in when prompted.</p>
+          <a href="https://docs.anthropic.com/en/claude-code/ide-integrations" target="_blank" rel="noopener">Claude Code VS Code integration →</a>
+        </div>
+      </div>
+      <div class="setup-step">
+        <span class="step-circle">4</span>
+        <div>
+          <h3>Create a local course folder</h3>
+          <p>Create a new, empty folder on your computer for the course. Keep it separate from other projects.</p>
+          <p>Example: <code>Documents/agentic-clinical-research-course/</code></p>
+        </div>
+      </div>
+      <div class="setup-step">
+        <span class="step-circle">5</span>
+        <div>
+          <h3>Open that folder in VS Code</h3>
+          <p><strong>File → Open Folder</strong> → choose your course folder. The Explorer panel should show an empty directory.</p>
+        </div>
+      </div>
+      <div class="setup-step">
+        <span class="step-circle">6</span>
+        <div>
+          <h3>Open Claude Code and paste the setup prompt</h3>
+          <p>Open Claude Code inside VS Code. Copy the prompt below and paste it into the Claude Code chat. Claude will clone the repo, run checks, and walk you through the next steps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMPT -->
+<section id="prompt" class="prompt-sec">
+  <div class="col">
+    <p class="eyebrow">Setup prompt</p>
+    <h2>Copy and paste this into Claude Code</h2>
+    <p class="lead">This prompt tells Claude to clone the course repo, run setup checks, and explain how to start. Paste it once, into the Claude Code chat inside VS Code.</p>
+
+    <div class="console-frame">
+      <div class="console-bar">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span class="clabel">Claude Code — paste into chat</span>
+        <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">Copy prompt</button>
+      </div>
+      <pre class="console-body" id="promptText">You are Claude Code helping me set up the Agentic Clinical Research Studio course repo.
+
+I am a student. I want you to prepare the course workspace for me.
+
+---
+
+FIRST — confirm where you are:
+
+* Tell me the current folder path.
+* Tell me whether it is empty or already contains the course repo.
+* If the repo is already here, skip the clone step.
+* Do not delete or overwrite anything without asking me first.
+
+---
+
+SECOND — get the repository URL:
+
+* If my instructor gave me a GitHub Classroom repository URL,
+  ask me to paste it now and use that URL.
+* If I do not have a Classroom URL, use the instructor template repo:
+  git@github.com:au-cfin-geng/student-classroom-repo.git
+* If SSH authentication fails, stop immediately and tell me
+  what to report to the instructor.
+
+---
+
+THIRD — clone and inspect:
+
+* Clone the repository into this folder.
+* Enter the cloned folder.
+* Read START_HERE.md and CLAUDE.md so you understand the course structure.
+* Tell me in 3 sentences what this course is about.
+
+---
+
+FOURTH — run setup checks:
+
+* Run: make preflight
+  Tell me whether it passed or failed.
+  If it failed, explain what is missing.
+
+* Run: make progress
+  Show me the current lab progress table.
+
+---
+
+FIFTH — explain how to work:
+
+Tell me:
+
+1. Open student-lab.code-workspace in VS Code
+   to get the full course view.
+2. Run `make dashboard` to open the course dashboard
+   (the visual interface for all labs).
+3. All lab work goes into LabXX/work/
+   — for example, Lab01/work/.
+4. When I finish a lab activity, I paste the Finish Lab prompt
+   from lecture-repo/prompts/finish_lab.md into Claude Code.
+5. Claude packages the submission into LabXXSubmission/
+   — I do not run any commands manually.
+6. I can check progress anytime with `make progress`.
+
+---
+
+RULES:
+
+* Do not push anything during setup.
+* Do not modify lecture-repo/ unless running course setup commands.
+* Do not create or edit student submission files during setup.
+* Do not make assumptions about my GitHub account or authentication.
+* If any step fails, stop and explain clearly what I should
+  tell the instructor.</pre>
+    </div>
+    <p class="prompt-fn">If your instructor gave you a GitHub Classroom repository URL, use that URL instead of the template repo when Claude asks.</p>
+  </div>
+</section>
+
+<!-- AFTER SETUP -->
+<section id="after">
+  <div class="col">
+    <p class="eyebrow">After setup</p>
+    <h2>After Claude finishes setup</h2>
+    <p class="lead">Once Claude confirms preflight passes and shows you the progress table, your workspace is ready. Follow these steps to start the course.</p>
+
+    <div class="after">
+      <div class="after-item">Open <code>student-lab.code-workspace</code> in VS Code for the full course view.</div>
+      <div class="after-item">Run <code>make dashboard</code> if Claude has not already started it, and open the URL it prints.</div>
+      <div class="after-item">Start with <strong>Lab00</strong> — read the brief in the dashboard, then paste the lab prompt into Claude Code.</div>
+      <div class="after-item">Work only inside <code>LabXX/work/</code>. Do not manually create or edit submission folders.</div>
+      <div class="after-item">Finish each lab using the <strong>Finish Lab</strong> prompt from the dashboard or from <code>lecture-repo/prompts/finish_lab.md</code>.</div>
+      <div class="after-item">Check progress anytime with <code>make progress</code> or in the dashboard.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HELP -->
+<section id="help">
+  <div class="col">
+    <p class="eyebrow">Help</p>
+    <h2>If you get stuck</h2>
+    <p class="lead">Setup problems are common and fixable. Tell your instructor or TA the following, and most issues resolve quickly.</p>
+
+    <div class="help-box">
+      <h3>What to report</h3>
+      <ul class="help-list">
+        <li>Which setup step failed — or which lab you were on</li>
+        <li>What Claude said — copy the exact message</li>
+        <li>What error appeared — copy the full error text</li>
+        <li>Whether the repo was cloned successfully</li>
+        <li>Whether <code>make preflight</code> passed or failed, and what it printed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  Agentic Clinical Research Studio &nbsp;&middot;&nbsp; Start here before opening the repository.
+</footer>
+
+<script>
+function copyPrompt() {
+  var text = document.getElementById('promptText').textContent;
+  var btn = document.getElementById('copyBtn');
+  function done() {
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = 'Copy prompt';
+      btn.classList.remove('copied');
+    }, 2200);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(fallback);
+  } else { fallback(); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.cssText = 'position:fixed;opacity:0';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    done();
+  }
+}
+</script>
+
+</body>
+</html>

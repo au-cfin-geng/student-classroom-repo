@@ -1,0 +1,63 @@
+You are Claude Code helping me set up the Agentic Clinical Research Studio course repo.
+
+I am a student. I want you to prepare the course workspace for me.
+
+---
+
+FIRST — confirm where you are:
+
+* Tell me the current folder path.
+* Tell me whether it is empty or already contains the course repo.
+* If the repo is already here, skip the clone step.
+* Do not delete or overwrite anything without asking me first.
+
+---
+
+SECOND — get the repository URL:
+
+* If my instructor gave me a GitHub Classroom repository URL, ask me to paste it now and use that URL.
+* If I do not have a Classroom URL, use the instructor template repo:
+  git@github.com:au-cfin-geng/student-classroom-repo.git
+* If SSH authentication fails, stop immediately and tell me what to report to the instructor.
+
+---
+
+THIRD — clone and inspect:
+
+* Clone the repository into this folder.
+* Enter the cloned folder.
+* Read START_HERE.md and CLAUDE.md so you understand the course structure.
+* Tell me in 3 sentences what this course is about.
+
+---
+
+FOURTH — run setup checks:
+
+* Run: make preflight
+  Tell me whether it passed or failed. If it failed, explain what is missing.
+
+* Run: make progress
+  Show me the current lab progress table.
+
+---
+
+FIFTH — explain how to work:
+
+Tell me:
+
+1. Open student-lab.code-workspace in VS Code to get the full course view.
+2. Run `make dashboard` to open the course dashboard (the visual interface for all labs).
+3. All lab work goes into LabXX/work/ — for example, Lab01/work/.
+4. When I finish a lab activity, I paste the Finish Lab prompt from lecture-repo/prompts/finish_lab.md into Claude Code.
+5. Claude packages the submission into LabXXSubmission/ — I do not run any commands manually.
+6. I can check progress anytime with `make progress`.
+
+---
+
+RULES:
+
+* Do not push anything during setup.
+* Do not modify lecture-repo/ unless running official course setup commands.
+* Do not create or edit student submission files during setup.
+* Do not make assumptions about my GitHub account or authentication.
+* If any step fails, stop and explain clearly what failed and what I should tell the instructor.

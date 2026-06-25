@@ -2,6 +2,9 @@
 
 **A module-based course: using Claude for clinical AI research**
 
+> **First time here?** Start from the course onboarding site before opening the repo.
+> Course onboarding site: [to be enabled via GitHub Pages — see course-site/]
+
 > Open in VS Code: double-click `student-lab.code-workspace`
 
 You are a junior clinical AI investigator. Over two days, you will build, evaluate, diagnose, and improve a brain tumour segmentation model — using Claude as your research partner at every step.
