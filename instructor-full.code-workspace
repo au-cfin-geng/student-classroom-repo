@@ -1,19 +1,19 @@
 {
   "folders": [
     {
-      "name": "Medical AI Lab — Full View",
+      "name": "Agentic Clinical Research Studio — Full View",
       "path": "."
     }
   ],
   "settings": {
-    // ── Instructor / full view ─────────────────────────────────────────────────
-    // Shows all files including support scaffold, dashboard source, tests,
-    // scripts, grading infrastructure, and instructor reference documents.
+    // Instructor / full view.
+    // Shows all files including lecture-repo internals, scripts, tests, grading,
+    // and all Lab working + submission folders.
     // Use this when setting up the course, debugging the system, or reviewing
-    // student work against the full repo structure.
+    // student submissions.
 
     "files.exclude": {
-      // Only hide runtime-generated ephemeral state that is never manually edited
+      // Only hide runtime-generated ephemeral state
       ".venv/":              true,
       ".pytest_cache/":      true
     },
@@ -24,6 +24,7 @@
     },
 
     "explorer.compactFolders": false,
-    "editor.minimap.enabled": true
+    "editor.minimap.enabled": true,
+    "git.decorations.enabled": true
   }
 }

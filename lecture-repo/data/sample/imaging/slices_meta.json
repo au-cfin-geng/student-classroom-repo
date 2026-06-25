@@ -1,0 +1,26 @@
+{
+  "dataset": "Medical Segmentation Decathlon Task01 \u2014 Brain Tumour (BraTS 2016/2017)",
+  "n_slices": 10,
+  "shape": [
+    128,
+    128
+  ],
+  "mean_lesion_fraction": 0.170349,
+  "source": "Medical Segmentation Decathlon Task01 Brain Tumour (source: BRATS 2016 and 2017 datasets)",
+  "modality": "FLAIR (channel 3), per-slice normalised to [0, 255]",
+  "axial_selection": "slice with maximum tumour area per case",
+  "label": "binary tumour mask (any BraTS label > 0)",
+  "cases_used": [
+    "BRATS_001.nii",
+    "BRATS_002.nii",
+    "BRATS_003.nii",
+    "BRATS_004.nii",
+    "BRATS_005.nii",
+    "BRATS_006.nii",
+    "BRATS_007.nii",
+    "BRATS_008.nii",
+    "BRATS_009.nii",
+    "BRATS_010.nii"
+  ],
+  "note": "2D axial slices from real MRI data. Curated teaching pack. Do not redistribute. CC BY-SA 4.0 (MSD licence)."
+}

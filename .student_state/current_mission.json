@@ -1,9 +1,12 @@
 {
-  "current_mission": 0,
-  "completed_missions": [],
-  "unlocked_missions": [
+  "current_mission": 1,
+  "completed_missions": [
     0
   ],
-  "last_checked": null,
+  "unlocked_missions": [
+    0,
+    1
+  ],
+  "last_checked": "2026-06-03T22:06:40.636525+00:00",
   "mode": "guided"
 }

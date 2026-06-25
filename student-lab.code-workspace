@@ -1,63 +1,61 @@
 {
   "folders": [
     {
-      "name": "Medical AI Lab",
+      "name": "Agentic Clinical Research Studio",
       "path": "."
     }
   ],
   "settings": {
-    // ── Student-facing view ────────────────────────────────────────────────────
-    // This workspace is the recommended way to open the repo in VS Code.
-    // It shows only what students need: prompts, outputs, reports, and the
-    // three orientation documents (README, ASSIGNMENT, CLAUDE.md).
-    // All support scaffold is hidden from the Explorer but still works normally.
+    // Student-facing workspace view.
+    // Visible: course root docs, LabXX working folders, LabXXSubmission folders.
+    // Hidden: lecture-repo internals (app, scripts, tests, data, etc.)
+    // Students work in LabXX/work/ and see results in LabXXSubmission/.
 
     "files.exclude": {
-      // Support infrastructure — hidden but fully functional
-      ".coursekit/":         true,
-      ".devcontainer/":      true,
-      ".github/":            true,
-      ".pytest_cache/":      true,
-      ".session_archives/":  true,
-      ".student_state/":     true,
-      ".venv/":              true,
-      ".vscode/":            true,
-      "app/":                true,
-      "artifacts/":          true,
+      // Internal course infrastructure
+      "lecture-repo/app/":           true,
+      "lecture-repo/scripts/":       true,
+      "lecture-repo/tests/":         true,
+      "lecture-repo/data/":          true,
+      "lecture-repo/artifacts/":     true,
+      "lecture-repo/.coursekit/":    true,
+      "lecture-repo/modules/":       true,
+      "lecture-repo/reports/":       true,
+      "lecture-repo/outputs/":       true,
+      "lecture-repo/skills/":        true,
+      "lecture-repo/workflows/":     true,
+      "lecture-repo/submissions/":   true,
 
-      // Scaffold students work in via Claude, not by browsing
-      "scripts/":            true,
-      "tests/":              true,
-      "data/":               true,
-
-      // One-time setup / pipeline files — not pedagogically relevant day-to-day
-      "Makefile":            true,
-      "requirements.txt":    true,
-      "requirements.lock":   true,
-      ".gitignore":          true
+      // Runtime dirs
+      ".venv/":                      true,
+      ".pytest_cache/":              true,
+      ".github/":                    true,
+      ".devcontainer/":              true,
+      ".coursekit/":                 true,
+      ".session_archives/":          true,
+      ".student_state/":             true,
+      ".vscode/":                    true
     },
 
     "search.exclude": {
-      ".coursekit/":         true,
-      ".devcontainer/":      true,
-      ".github/":            true,
-      ".pytest_cache/":      true,
-      ".session_archives/":  true,
-      ".student_state/":     true,
-      ".venv/":              true,
-      "app/":                true,
-      "artifacts/":          true,
-      "scripts/":            true,
-      "tests/":              true,
-      "data/":               true
+      "lecture-repo/app/":           true,
+      "lecture-repo/scripts/":       true,
+      "lecture-repo/tests/":         true,
+      "lecture-repo/data/":          true,
+      "lecture-repo/artifacts/":     true,
+      "lecture-repo/.coursekit/":    true,
+      ".venv/":                      true,
+      ".pytest_cache/":              true
     },
 
-    // Keep Explorer clean and focused
     "explorer.compactFolders": false,
     "explorer.sortOrder": "default",
-
-    // Suppress noisy status-bar features not relevant to students
     "git.decorations.enabled": true,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+
+    // Open markdown files in preview mode by default
+    "workbench.editorAssociations": {
+      "*.md": "vscode.markdown.preview.editor"
+    }
   }
 }

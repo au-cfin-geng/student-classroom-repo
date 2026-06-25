@@ -1,0 +1,72 @@
+name: Grade Submissions
+
+# Runs when Lab working folders or Submission folders change.
+# Uses progress mode by default — never fails on a fresh clone or partially
+# completed course. Fails only if a submission claims ready_for_review=true
+# but required evidence files are missing (broken package).
+
+on:
+  push:
+    paths:
+      - 'Lab00/**'
+      - 'Lab01/**'
+      - 'Lab02/**'
+      - 'Lab03/**'
+      - 'Lab04/**'
+      - 'Lab05/**'
+      - 'Capstone/**'
+      - 'Lab00Submission/**'
+      - 'Lab01Submission/**'
+      - 'Lab02Submission/**'
+      - 'Lab03Submission/**'
+      - 'Lab04Submission/**'
+      - 'Lab05Submission/**'
+      - 'CapstoneSubmission/**'
+  pull_request:
+    paths:
+      - 'Lab*/**'
+      - 'Capstone/**'
+      - '*Submission/**'
+
+jobs:
+  grade:
+    name: Submission check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r lecture-repo/requirements.txt
+
+      - name: Show progress (always succeeds)
+        run: python lecture-repo/scripts/grade_submissions.py --mode progress
+
+      - name: Strict check — fail only if broken ready submission
+        run: python lecture-repo/scripts/grade_submissions.py --mode strict
+
+      - name: Show course progress
+        if: always()
+        run: |
+          if [ -f COURSE_PROGRESS.md ]; then
+            echo "── Course Progress ──────────────────────────"
+            cat COURSE_PROGRESS.md
+          else
+            echo "No COURSE_PROGRESS.md yet."
+          fi
+
+      - name: Upload grading report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grading-report-${{ github.sha }}
+          path: lecture-repo/outputs/grading/grading_report.json
+          if-no-files-found: warn
+          retention-days: 30

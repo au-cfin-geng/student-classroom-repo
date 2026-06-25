@@ -1,193 +1,178 @@
-# Lab Assignment — Medical AI + Agentic Coding for Clinical Research
+# Assignment — Agentic Clinical Research Studio
 
-## Overview
+## Course
 
-This two-day lab puts you in the role of a **junior clinical AI investigator** working through a sequence of research missions. Your goal is to build a reproducible medical image segmentation pipeline, investigate its failures, make one justified improvement, and produce written outputs suitable for clinical discussion.
+This course teaches clinical and life-science researchers to design **agentic research workflows** using Claude, VS Code, GitHub, Skills, and tools. You will produce traceable, reviewable artifacts that constitute an auditable research record.
 
-You do not need traditional programming fluency to complete this lab. You work by using **prompts as experimental instruments** in VS Code + Claude Code, guided by a local dashboard that shows your current mission, required artifacts, and progress.
+The clinical scenario throughout: brain tumour segmentation from FLAIR MRI.
 
-The lab assesses both the artifacts you produce and your ability to reason honestly about them.
-
----
-
-## How you work in this lab
-
-The primary loop for every mission is:
-
-**dashboard → prompt → VS Code + Claude Code → artifact → dashboard**
-
-1. Open the dashboard (`make dashboard`) and read the current mission.
-2. Copy or adapt the mission prompt shown in the dashboard's Prompt Studio tab.
-3. Switch to **VS Code + Claude Code** and run the prompt-driven task.
-4. Return to the dashboard and inspect the new artifacts, metrics, and feedback.
-5. When the mission checklist shows complete, create a checkpoint commit and push.
-
-The dashboard is your navigation and feedback console — it shows mission guidance, artifact previews, run history, and submission readiness. Claude interaction happens in VS Code + Claude Code, not in the dashboard.
-
-Commits and pushes are part of the workflow. Push at least once per completed mission so the instructor can track progress.
+You are not here to write software. You are here to write precise prompts, judge Claude's outputs against research standards, and commit artifacts that reflect your scientific reasoning.
 
 ---
 
-## Mission sequence
+## Your role
 
-The lab is organized as a sequence of research missions, not disconnected exercises.
+You are a **junior clinical AI investigator**.
 
-**Day 1** establishes the baseline pipeline:
+You direct the research. Claude builds, runs, and summarizes. You judge the results.
 
-| Mission | Theme |
-|---|---|
-| Mission 0 — Wake the Lab | Environment setup, first prompt-driven success |
-| Mission 1 — Receive the Signal | Fetch teaching pack, inspect dataset |
-| Mission 2 — Build the First Detector | Baseline model, first meaningful metric |
-| Mission 3 — Investigate Failure | Error analysis, hypothesis formation |
-| Mission 4 — Improve With Intent | One controlled improvement, measured comparison |
-| Mission 5 — Pack the Report | Day 1 summary |
-
-**Day 2** builds on Day 1 results:
-
-| Mission | Theme |
-|---|---|
-| Mission 5 — Design the Next Study | Challenge planning, pipeline adaptation |
-| Mission 6 — Translate Responsibly | Clinical gap, human oversight, translation memo |
-
-Each mission has a goal, a set of allowed files, and completion criteria visible in the dashboard's Workflow tab. Complete one mission before beginning the next.
+Prompts are your experimental instruments. Better prompts improve experimental control.
 
 ---
 
-## Agentic research skills you will practice
+## Lab structure
 
-- Reading a repository with Claude Code (Mission 0)
-- Using CLAUDE.md as project memory (all missions)
-- Writing prompts with explicit output contracts (all missions)
-- Asking Claude to inspect before acting (Missions 1, 3)
-- Building a reproducible baseline with defined success criteria (Mission 2)
-- Using observation → evidence → hypothesis sequencing (Mission 3)
-- Running controlled single-variable experiments (Mission 4)
-- Switching Claude's role: developer → reviewer → clinical translator (Missions 5, 6)
-- Comparing prompt strategies (all missions)
-- Preserving required artifacts while exploring optional extensions (Missions 2–5)
-- Maintaining human scientific judgment throughout (all missions)
+| Lab | Theme | What you practice |
+|-----|-------|--------------------|
+| Lab00 — Welcome to Agentic Clinical Research | Orientation | CLAUDE.md as project memory, first prompt-driven artifact |
+| Lab01 — Prompt Contracts | Prompt engineering | Output contracts, permission design, role specification |
+| Lab02 — Multi-Stakeholder Review | Communication | Adapting outputs for different audiences, honesty constraints |
+| Lab03 — Literature Search Skills | Skills/tools | Building reusable Claude Skills, structured literature search |
+| Lab04 — Tool / MCP-Aware Workflow | Tool use | MCP tool integration, tool-aware prompting |
+| Lab05 — Subagents & Orchestration | Agentic pipelines | Subagent decomposition, orchestration, handoff |
+| Capstone | Integration | Independent research workflow combining labs |
 
----
-
-## Traditional problem → Claude method → research artifact
-
-| Mission | Traditional bottleneck | Claude / agentic method | Artifact produced |
-|---|---|---|---|
-| Preflight | Environment setup fails silently | Claude as setup assistant + readiness audit | outputs/status/preflight_complete.json |
-| Mission 0 | Environment chaos; unclear readiness | CLAUDE.md project memory + output contract | reports/env_check.md |
-| Mission 1 | Modeling before understanding data | Claude as data steward + file inspection | reports/data_notes.md |
-| Mission 2 | Complex models without a baseline | Claude as builder + evaluation-driven prompting | outputs/metrics/val_metrics.json |
-| Mission 3 | Metrics without error understanding | Claude as visual debugger + hypothesis generator | reports/error_analysis.md |
-| Mission 4 | Untracked multi-variable tweaking | Claude as algorithm engineer + controlled comparison | reports/model_swap.md |
-| Mission 5 | Pilot results with no next study design | Role switching to reviewer / study design critic | reports/challenge_plan.md |
-| Mission 6 | Overclaiming prototype capabilities | Claude as clinical translator + honesty constraint | reports/translation_memo.md |
+Extension labs (optional, Day 2):
+- Extension06 — Controlled Experiments
+- Extension07 — Clinical Translation
+- Extension08 — Research Memory & Handoff
 
 ---
 
-## What you submit
+## Where you work
 
-You submit this GitHub repository. At submission time, the repository must contain all of the required artifacts listed below. Grading runs automated tests against your committed files.
+All student work for each lab happens in `LabXX/work/`.
 
-**Submission = your final commit pushed before the deadline.**
+```
+Lab03/
+└── work/
+    ├── L3_literature_search_skill.md   ← your primary lab report
+    ├── L3_literature_search.md         ← your search results artifact
+    └── status.json                     ← completion status
+```
 
-There is no separate upload step. Push your work and you are done.
+**Do not edit `lecture-repo/`.** That directory contains course infrastructure.
+
+**Do not scatter files in the repo root.** Everything goes in `LabXX/work/`.
 
 ---
 
-## Required artifacts
+## How to complete a lab
 
-All paths are relative to the repository root.
+1. Open the dashboard: `make dashboard`
+2. Read the lab page — understand the goal and prompt
+3. Open `LabXX/do_lab_prompt.md` in VS Code
+4. Paste it into Claude Code — Claude produces artifacts in `LabXX/work/`
+5. Review and iterate on Claude's outputs
+6. When the lab is done, paste `lecture-repo/prompts/finish_lab.md` into Claude Code
 
-### Status files (written automatically by scripts — do not edit)
+**Claude handles packaging.** You do not manually run submission commands.
 
-| File | Required keys |
-|---|---|
-| `outputs/status/stage_00_bootstrap.json` | `status`, `python_version`, `platform` |
-| `outputs/status/stage_01_fetch_sample.json` | `status`, `dataset` |
-| `outputs/status/stage_02_load_visualize.json` | `status`, `figure` |
-| `outputs/status/stage_03_train_baseline.json` | `status`, `dice` |
-| `outputs/status/stage_04_error_analysis.json` | `status`, `best_case`, `worst_case` |
-| `outputs/status/stage_05_model_swap.json` | `status`, `baseline_dice`, `new_dice`, `change_description` |
-| `outputs/status/stage_06_pack_report.json` | `status`, `sections` |
+When you paste the Finish Lab prompt:
+- Claude reads your work in `LabXX/work/`
+- Claude packages evidence into `LabXXSubmission/`
+- Claude drafts `LabXXSubmission/submission.md` from your actual work
+- You review Claude's draft — confirm or ask for changes
+- Claude shows `git status` and asks before committing
+- You decide when to push
 
-Day 2 (required for full credit):
+---
 
-| File | Required keys |
-|---|---|
-| `outputs/status/stage_07_challenge_plan.json` | `status` |
-| `outputs/status/stage_08_adapt_pipeline.json` | `status` |
-| `outputs/status/stage_09_translation_memo.json` | `status` |
+## Required artifacts per lab
 
-### Figures
+Claude checks these during packaging. GitHub Actions checks them on every push.
 
-| File | Notes |
-|---|---|
-| `outputs/figures/sample_overlay.png` | Must be non-empty |
-| `outputs/figures/loss_curve.png` | Must be non-empty |
-| `outputs/figures/error_analysis_best.png` | Must be non-empty |
-| `outputs/figures/error_analysis_worst.png` | Must be non-empty |
-| `outputs/figures/model_swap_comparison.png` | Must be non-empty |
-| `outputs/figures/challenge_comparison.png` | Must be non-empty (Day 2) |
+| Lab | Required files |
+|-----|---------------|
+| Lab00 | `Lab00/work/L0_orientation.md`, `Lab00/work/status.json` |
+| Lab01 | `Lab01/work/L1_prompt_contract.md`, `Lab01/work/status.json` |
+| Lab02 | `Lab02/work/L2_multi_stakeholder_review.md`, `Lab02/work/status.json` |
+| Lab03 | `Lab03/work/L3_literature_search_skill.md`, `Lab03/work/L3_literature_search.md`, `Lab03/work/status.json` |
+| Lab04 | `Lab04/work/L4_tool_mcp_workflow.md`, `Lab04/work/status.json` |
+| Lab05 | `Lab05/work/L5_subagent_workflow.md`, `Lab05/work/L5_subagent_workflow_report.md`, `Lab05/work/status.json` |
+| Capstone | `Capstone/work/capstone_report.md`, `Capstone/work/showcase.md`, `Capstone/work/status.json` |
 
-### Metrics
+`status.json` minimum schema: `{"status": "ok", "lab": "LabXX"}`
 
-| File | Required keys | Constraints |
-|---|---|---|
-| `outputs/metrics/val_metrics.json` | `dice` | Float between 0.0 and 1.0 |
-| `outputs/metrics/model_swap_comparison.json` | `baseline_dice`, `new_dice`, `change_description` | Both dice values must be valid floats |
+---
 
-### Reports (written by you with Claude's help)
+## Submission packages
 
-| File | Minimum requirement |
-|---|---|
-| `reports/env_check.md` | Non-empty |
-| `reports/data_notes.md` | Non-empty |
-| `reports/train_notes.md` | Contains Dice score |
-| `reports/error_analysis.md` | Describes at least one failure case |
-| `reports/model_swap.md` | Describes the change and outcome |
-| `reports/day1_summary.md` | Covers all Day 1 missions |
-| `reports/translation_memo.md` | Addresses prototype vs. clinical deployment |
+After Claude runs the Finish Lab prompt, each lab produces a submission package:
+
+```
+Lab03Submission/
+├── submission.md          ← Claude's draft; you review and confirm
+├── evidence_manifest.json ← list of evidence files Claude found
+└── status.json            ← ready_for_review flag
+```
+
+`submission.md` is Claude's synthesis of your work. It is not meant to be perfect — you are expected to review it and push back if it misrepresents what happened.
+
+---
+
+## What submission.md covers
+
+Each lab's `submission.md` should address:
+
+- **Clinical problem** — what were you investigating?
+- **Agentic / Claude concept** — what prompt pattern did you apply?
+- **What was produced** — what artifacts were created and what do they show?
+- **Human verification** — what did you review, judge, or correct?
+- **Limitations** — what failed or is uncertain?
+- **Ready for review** — checklist
+
+Capstone also includes:
+- **Agentic workflow used** — which labs did you integrate?
+- **Showcase summary** — 3–5 sentences for the showcase presentation
+
+---
+
+## Grading
+
+**Automated (GitHub Actions):** On every push, the grader checks structure — artifact presence, JSON parseability, heading presence in `submission.md`. Results appear in the Actions tab.
+
+Run locally anytime:
+```bash
+make progress    # friendly progress report
+```
+
+**Manual review:** The instructor reads selected `submission.md` files for:
+- Quality of scientific reasoning
+- Honesty about results — failures reported accurately, not obscured
+- Groundedness in evidence — conclusions tied to specific artifacts
+- Prompt craft — output contracts, role specification, constraints
+
+Priority labs for manual review: Lab01, Lab03, Lab05, Capstone.
+
+**You are not graded on achieving the best results.** You are graded on the quality of your process, reasoning, and artifacts.
+
+---
+
+## Submission
+
+Your submission is this GitHub repository. **Submission = your final commit pushed before the deadline.** No separate upload is required.
+
+Push at minimum once after each lab so the instructor can observe incremental progress.
 
 ---
 
 ## Academic integrity
 
-This lab requires you to use Claude Code. That is intentional. Using AI assistance is part of the assignment.
+Using Claude is required and intentional. The following are violations:
 
-The following are violations of academic integrity:
-
-- **Fabricating metrics.** All metric values in `outputs/metrics/` must come from actually running the pipeline. Do not write or edit metric files by hand.
-- **Copying another student's artifacts.** Your outputs must come from running your own pipeline on your own assigned dataset.
-- **Misrepresenting Claude's work as independent insight.** Reports are expected to reflect your own understanding. Use Claude to help you write clearly, not to replace your reasoning.
-- **Bypassing a mission.** If a stage fails, debug it. Do not manually write the status JSON to make it appear complete.
-
-If you are unsure whether something is allowed, ask before doing it.
-
----
-
-## How grading works
-
-Grading is partly automated and partly manual.
-
-**Automated (CI):** When you push, GitHub Actions runs `pytest -q tests/`. Visible test results are shown in the Actions tab of your repository. You can push as many times as you like before the deadline.
-
-Run `make test` locally at any time to see the same results before pushing.
-Run `make preflight` for a quick structural check that requires no data.
-
-The dashboard's Evaluation tab shows the same checks locally in real time — use it to confirm submission readiness before your final push.
-
-**Manual review:** The instructor will review your `reports/` for quality of reasoning, honesty about results, and clarity of clinical discussion.
+- **Fabricating artifacts.** All content in `LabXX/work/` must come from actual Claude interactions. Do not invent metric values, citations, or outputs.
+- **Fabricating submission.md.** If Claude drafts your submission based on real evidence, that is expected. If you write fabricated evidence summaries by hand, that is a violation.
+- **Copying another student's work.** Your artifacts must come from your own lab sessions.
+- **Bypassing the honesty requirement.** If your lab work had limitations or failures, your submission must say so. A submission that accurately reports failure scores higher than one that conceals it.
 
 ---
 
 ## What good work looks like
 
-- **Prompt-first.** You used structured prompts in VS Code + Claude Code to drive each mission — not ad hoc edits or manual pipeline tweaks.
-- **Reproducible.** Running `make run-day1` from a clean clone produces the same outputs.
-- **Honest.** Reports accurately describe the metrics, including failures and limitations. You report what you found, not what you wished to find.
-- **Grounded in evidence.** Your error analysis names a specific failure. Your improvement has a rationale tied to that failure. Your translation memo acknowledges gaps.
-- **Staged.** Each mission is complete before the next begins. Status files and the dashboard confirm this.
-- **Pushes are present.** The commit history shows mission-level checkpoints, not a single dump at the deadline.
-
-You are not graded on achieving a high Dice score. You are graded on the quality of your process and reasoning.
+- **Prompt-first.** Every lab was driven by structured prompts in Claude Code — not by direct file edits.
+- **Evidence-grounded.** `submission.md` reflects what is actually in `LabXX/work/`.
+- **Honest.** Limitations are named. Failures are explained.
+- **Reviewed.** You pushed back on Claude's draft where it was wrong or imprecise.
+- **Incremental.** Commit history shows lab checkpoints, not a single deadline dump.
+- **Research-voiced.** Reports use research language: "I investigated X and found Y" not "I ran the script."

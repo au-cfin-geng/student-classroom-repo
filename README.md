@@ -1,111 +1,92 @@
-# Medical AI + Agentic Coding Lab
+# Clinical Claude
 
-**PhD Course: Medical AI + Agentic Coding for Clinical Research**
+**A module-based course: using Claude for clinical AI research**
 
-> **Open in VS Code:** double-click `student-lab.code-workspace` — this gives you the intended student-facing view. Do not open the raw folder directly.
+> Open in VS Code: double-click `student-lab.code-workspace`
 
-This is a **prompt-first clinical AI research lab**. You are a junior clinical AI investigator using VS Code + Claude Code as your research environment. Every mission teaches one clinical AI concept and one Claude / agentic research concept. Your work product is a growing set of artifacts in `outputs/` and `reports/`.
+You are a junior clinical AI investigator. Over two days, you will build, evaluate, diagnose, and improve a brain tumour segmentation model — using Claude as your research partner at every step.
 
-You do not need traditional programming fluency. You work by writing structured prompts in **VS Code + Claude Code**, guided by a local dashboard.
+This is not a programming course. Every task in this course is driven by prompts you write in VS Code + Claude Code. The research is real. The results are real. The judgment is yours.
 
 ---
 
-## Start here
+## Quick start
 
 ```bash
-pip install -r requirements.txt   # install dependencies (one-time)
-make preflight                    # confirm environment is intact
-make fetch-sample                 # download the teaching data
-make dashboard                    # open the mission dashboard
+pip install -r requirements.txt   # one-time setup
+make preflight                    # confirm the environment is intact
+make fetch-sample                 # download the teaching dataset
+make dashboard                    # open the course dashboard
 ```
 
 ---
 
-## The loop
-
-Every mission follows the same rhythm:
-
-> **dashboard → prompt → VS Code + Claude Code → artifact → dashboard**
-
-1. Open the dashboard (`make dashboard`) and read the current mission.
-2. Copy the prompt shown in the dashboard into your Claude Code session.
-3. Let Claude run the task — it reads the repo, writes or extends scripts, produces artifacts.
-4. Return to the dashboard and inspect the new outputs.
-5. When the mission checklist shows complete, create a checkpoint commit and push.
-
-The dashboard is your **navigation and feedback console**. All Claude interaction happens in VS Code + Claude Code — not in the dashboard.
-
----
-
-## Why not just give you finished code?
-
-Traditional teaching gives you finished code to run. You execute it, observe the output, and move on. The code does the thinking; you observe.
-
-This lab works differently. You use Claude to **inspect, build, verify, and explain**. The learning IS the prompting. When you write a prompt that specifies an output contract, asks Claude to state its plan before acting, and then verify the result against real metrics — you are practicing the judgment that separates a researcher from a script runner.
-
-The scaffold (stages, tests, Makefile, grading artifacts) exists for **grading stability and classroom timing**, not to replace the scientific experience. The tests make sure required artifacts exist and are structurally valid. They cannot verify that you understood what you built. That is what the reports are for, and that is what the instructor reads.
-
-The scientific experience — understanding the data, forming a hypothesis about failure, designing a controlled improvement, translating honestly to clinical language — belongs to you.
-
----
-
-## What you generate
-
-This repo starts intentionally sparse. You and Claude gradually fill it in:
+## The course in one loop
 
 ```
-prompts/          read these to guide each mission
+dashboard → write a prompt → VS Code + Claude Code → inspect artifact → dashboard
+```
+
+The dashboard shows your current module, the expected outputs, and your progress. Claude runs in VS Code. Artifacts (figures, metrics, reports) accumulate in `outputs/` and `reports/` as you work. Those artifacts are what you submit.
+
+---
+
+## Seven modules + one capstone
+
+Each module teaches one Claude principle through one clinical research scenario.
+
+| Module | Clinical scenario | Claude principle |
+|--------|------------------|-----------------|
+| **M0 — Project Memory** | Lab setup chaos | CLAUDE.md as project context |
+| **M1 — Inspect Before You Model** | Blind modeling on unknown data | Structured inspection first |
+| **M2 — Define Success First** | No baseline to compare against | Evaluation-driven prompting |
+| **M3 — Evidence-Based Diagnosis** | Guessing why the model fails | Observation → evidence → hypothesis |
+| **M4 — One Variable at a Time** | Untracked, undocumented changes | Controlled experiment design |
+| **M5 — The Reviewer Role** | Only seeing your own work | Role switching: developer → critic |
+| **M6 — Honest Translation** | Overclaiming prototype results | Multi-audience honesty constraints |
+| **Capstone** | End-to-end clinical AI judgment | Your own design |
+
+Complete them in order. See `modules/` for the design guide for each module.
+
+---
+
+## What you produce
+
+The repo starts sparse. You fill it in:
+
+```
 outputs/
-  figures/        PNG figures — overlays, loss curves, error maps
-  metrics/        JSON metric files — dice scores, comparisons
-  status/         per-stage completion checks
-reports/          written mission summaries
+  figures/        MRI overlays, loss curves, error maps
+  metrics/        Dice scores, comparisons
+  status/         Per-module completion signals
+reports/          Written analysis — what you found and what it means
 ```
 
-`outputs/` and `reports/` are empty at the start. Filling them is the lab.
-
----
-
-## Missions
-
-| Mission | Goal | Key output | Claude / agentic method |
-|---|---|---|---|
-| 0 — Wake the Lab | Environment setup | `reports/env_check.md` | CLAUDE.md as project memory + output contract |
-| 1 — Receive the Signal | Fetch and inspect the dataset | `data/sample/` + `reports/data_notes.md` | Claude as data steward + file inspection |
-| 2 — Build the First Detector | Baseline model + first metric | `outputs/metrics/val_metrics.json` | Claude as builder + evaluation-driven prompting |
-| 3 — Investigate Failure | Error analysis + hypothesis | `reports/error_analysis.md` | Claude as visual debugger + hypothesis generator |
-| 4 — Improve With Intent | One controlled improvement | `outputs/metrics/model_swap_comparison.json` | Claude as algorithm engineer + controlled comparison |
-| 5 — Design the Next Study | Day 2 challenge plan + adaptation | `reports/challenge_plan.md` | Role switching to reviewer / study design critic |
-| 6 — Translate Responsibly | Clinical translation memo | `reports/translation_memo.md` | Claude as clinical translator + honesty constraint |
-
-Complete them in order. The dashboard unlocks the next mission when the current one passes.
-
----
-
-## Agentic research skills you will practice
-
-- Reading a repository with Claude Code to understand what exists before acting
-- Using CLAUDE.md as project memory that persists across sessions
-- Writing prompts with explicit output contracts (file path, format, required keys)
-- Asking Claude to inspect before acting — state the plan, get approval, then execute
-- Switching Claude's role between developer, reviewer, and clinical translator across missions
-- Preserving required grading artifacts while exploring optional extensions
-- Maintaining human scientific judgment throughout — Claude helps, you decide
+`outputs/` and `reports/` are empty at the start. Filling them is the course.
 
 ---
 
 ## Commands
 
 ```bash
-make dashboard        # open the mission dashboard (primary interface)
-make preflight        # structural check — run first, no data required
-make fetch-sample     # download the teaching dataset
-make test             # run autograding checks (same as CI)
-make help             # list all available commands
+make dashboard        # open the course dashboard (primary interface)
+make preflight        # structural check — no data needed
+make fetch-sample     # download teaching dataset
+make test             # run autograding checks
+make help             # list all commands
 ```
 
 ---
 
-See [ASSIGNMENT.md](ASSIGNMENT.md) for full artifact requirements and grading criteria.
+## Why this approach
 
-*This repo contains support scaffold for teaching infrastructure and autograding. It is hidden from the workspace view by default and does not affect student work.*
+Traditional courses give you finished code to run. You observe the output and move on. The code does the thinking; you watch.
+
+This course works differently. You direct Claude with structured prompts that specify what to do, how to do it, and what output to produce. When the prompt is vague, the result is vague. When the prompt names the exact output file, defines the required keys, and specifies the success criteria — the result is verifiable.
+
+The habit you are building is this: **before using Claude on a research task, define what a good result would look like.** That habit is what makes AI useful in clinical research rather than dangerous.
+
+---
+
+For the full course design, see [COURSE_OVERVIEW.md](COURSE_OVERVIEW.md).
+For assignment details and grading, see [ASSIGNMENT.md](ASSIGNMENT.md).

@@ -1,0 +1,129 @@
+{
+  "graded_at": "2026-06-25",
+  "total": 7,
+  "ready": 0,
+  "broken": 0,
+  "not_started": 7,
+  "in_progress": 0,
+  "results": [
+    {
+      "lab": "Lab00",
+      "submission_folder": "Lab00Submission/",
+      "work_folder": "Lab00/work/",
+      "dir_exists": true,
+      "submission_md": false,
+      "status_json": false,
+      "manifest_json": false,
+      "missing_headings": [],
+      "missing_evidence": [],
+      "claims_ready": false,
+      "structural_pass": false,
+      "grade": "Not started",
+      "notes": [
+        "Use the Finish Lab prompt in Claude Code to package this lab"
+      ]
+    },
+    {
+      "lab": "Lab01",
+      "submission_folder": "Lab01Submission/",
+      "work_folder": "Lab01/work/",
+      "dir_exists": true,
+      "submission_md": false,
+      "status_json": false,
+      "manifest_json": false,
+      "missing_headings": [],
+      "missing_evidence": [],
+      "claims_ready": false,
+      "structural_pass": false,
+      "grade": "Not started",
+      "notes": [
+        "Use the Finish Lab prompt in Claude Code to package this lab"
+      ]
+    },
+    {
+      "lab": "Lab02",
+      "submission_folder": "Lab02Submission/",
+      "work_folder": "Lab02/work/",
+      "dir_exists": true,
+      "submission_md": false,
+      "status_json": false,
+      "manifest_json": false,
+      "missing_headings": [],
+      "missing_evidence": [],
+      "claims_ready": false,
+      "structural_pass": false,
+      "grade": "Not started",
+      "notes": [
+        "Use the Finish Lab prompt in Claude Code to package this lab"
+      ]
+    },
+    {
+      "lab": "Lab03",
+      "submission_folder": "Lab03Submission/",
+      "work_folder": "Lab03/work/",
+      "dir_exists": true,
+      "submission_md": false,
+      "status_json": false,
+      "manifest_json": false,
+      "missing_headings": [],
+      "missing_evidence": [],
+      "claims_ready": false,
+      "structural_pass": false,
+      "grade": "Not started",
+      "notes": [
+        "Use the Finish Lab prompt in Claude Code to package this lab"
+      ]
+    },
+    {
+      "lab": "Lab04",
+      "submission_folder": "Lab04Submission/",
+      "work_folder": "Lab04/work/",
+      "dir_exists": true,
+      "submission_md": false,
+      "status_json": false,
+      "manifest_json": false,
+      "missing_headings": [],
+      "missing_evidence": [],
+      "claims_ready": false,
+      "structural_pass": false,
+      "grade": "Not started",
+      "notes": [
+        "Use the Finish Lab prompt in Claude Code to package this lab"
+      ]
+    },
+    {
+      "lab": "Lab05",
+      "submission_folder": "Lab05Submission/",
+      "work_folder": "Lab05/work/",
+      "dir_exists": true,
+      "submission_md": false,
+      "status_json": false,
+      "manifest_json": false,
+      "missing_headings": [],
+      "missing_evidence": [],
+      "claims_ready": false,
+      "structural_pass": false,
+      "grade": "Not started",
+      "notes": [
+        "Use the Finish Lab prompt in Claude Code to package this lab"
+      ]
+    },
+    {
+      "lab": "Capstone",
+      "submission_folder": "CapstoneSubmission/",
+      "work_folder": "Capstone/work/",
+      "dir_exists": true,
+      "submission_md": false,
+      "status_json": false,
+      "manifest_json": false,
+      "missing_headings": [],
+      "missing_evidence": [],
+      "claims_ready": false,
+      "structural_pass": false,
+      "grade": "Not started",
+      "notes": [
+        "Use the Finish Lab prompt in Claude Code to package this lab"
+      ]
+    }
+  ]
+}

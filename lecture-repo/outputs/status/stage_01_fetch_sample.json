@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "dataset": "Medical Segmentation Decathlon Task01 \u2014 Brain Tumour (BraTS 2016/2017)",
+  "source": "url",
+  "n_slices": 10,
+  "modality": "FLAIR (channel 3), per-slice normalised to [0, 255]",
+  "npz_keys": [
+    "images",
+    "masks"
+  ],
+  "pack_path": "data/sample/imaging"
+}

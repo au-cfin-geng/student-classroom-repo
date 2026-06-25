@@ -18,10 +18,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r lecture-repo/requirements.txt
 
       - name: Run visible autograding tests
-        run: pytest -q tests/
+        run: pytest -q lecture-repo/tests/
 
       - name: Upload student artifacts
         if: always()
@@ -29,6 +29,18 @@ jobs:
         with:
           name: student-artifacts-${{ github.sha }}
           path: |
-            outputs/
-            reports/
+            Lab00/
+            Lab01/
+            Lab02/
+            Lab03/
+            Lab04/
+            Lab05/
+            Capstone/
+            Lab00Submission/
+            Lab01Submission/
+            Lab02Submission/
+            Lab03Submission/
+            Lab04Submission/
+            Lab05Submission/
+            CapstoneSubmission/
           retention-days: 30
